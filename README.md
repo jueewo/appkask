@@ -298,7 +298,7 @@ Rust (Axum 0.8) / SQLite (sqlx) / Askama 0.13 / MediaMTX / Astro / Babylon.js / 
 
 ## License
 
-Source available. License TBD.
+License TBD.
 
 ---
 
