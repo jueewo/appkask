@@ -1,11 +1,11 @@
 
-# AppKask
+# Aipokit
 
 > Deliver your consulting work in a complete environment your clients own.
 
 You deliver process models, data platforms, training materials, and media assets. Today that means seven tools, seven logins, seven places where client data lives. That's not a delivery — it's a scavenger hunt.
 
-AppKask packages your entire consulting delivery into one self-hosted platform. One workspace per client. One link to share. One binary to hand over.
+Aipokit packages your entire consulting delivery into one self-hosted platform. One workspace per client. One link to share. One binary to hand over.
 
 ---
 
@@ -40,8 +40,8 @@ AppKask packages your entire consulting delivery into one self-hosted platform. 
 ### Docker (recommended)
 
 ```bash
-git clone https://github.com/jueewo/appkask.git
-cd appkask/docker
+git clone https://github.com/jueewo/aipokit.git
+cd aipokit/docker
 docker compose up -d
 open http://localhost:3000
 ```
@@ -57,7 +57,7 @@ brew install ffmpeg mediamtx ghostscript webp
 # Start MediaMTX (separate terminal)
 mediamtx mediamtx.yml
 
-# Start AppKask
+# Start Aipokit
 cargo run --release
 open http://localhost:3000
 ```
@@ -69,7 +69,7 @@ open http://localhost:3000
 A Cargo workspace with 34 crates, built on Axum 0.8 and SQLite.
 
 ```
-appkask
+aipokit
  |-- Axum HTTP server (port 3000)
  |-- MediaMTX streaming server (RTMP/HLS/WebRTC)
  |-- SQLite database (single file, WAL mode)
@@ -157,7 +157,7 @@ RUN_MODE=production                  # Enforces security checks
 
 | Port | Service | Purpose |
 |---|---|---|
-| 3000 | AppKask | Web UI, API, media serving |
+| 3000 | Aipokit | Web UI, API, media serving |
 | 1935 | MediaMTX | RTMP ingest |
 | 8888 | MediaMTX | HLS output |
 | 8889 | MediaMTX | WebRTC output |
